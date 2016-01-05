@@ -10,15 +10,19 @@ import Cocoa
 import WebKit
 
 class WebViewController: NSViewController, WKNavigationDelegate {
+    var webView = WKWebView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.addTrackingRect(view.bounds, owner: self, userData: nil, assumeInside: false)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadURLObject:", name: "HeliumLoadURL", object: nil)
         
+
         // Layout webview
         view.addSubview(webView)
+
         webView.frame = view.bounds
         webView.autoresizingMask = [NSAutoresizingMaskOptions.ViewHeightSizable, NSAutoresizingMaskOptions.ViewWidthSizable]
         
@@ -43,7 +47,7 @@ class WebViewController: NSViewController, WKNavigationDelegate {
         clear()
     }
     
-    override func validateMenuItem(menuItem: NSMenuItem) -> Bool{
+    override func validateMenuItem(menuItem: NSMenuItem) -> Bool {
         switch menuItem.title {
         case "Back":
             return webView.canGoBack
@@ -117,7 +121,8 @@ class WebViewController: NSViewController, WKNavigationDelegate {
         webView.loadRequest(NSURLRequest(URL: url))
     }
     
-//MARK: - loadURLObject
+    // MARK: - loadURLObject
+    
     func loadURLObject(urlObject : NSNotification) {
         if let url = urlObject.object as? NSURL {
             loadAlmostURL(url.absoluteString);
@@ -131,7 +136,6 @@ class WebViewController: NSViewController, WKNavigationDelegate {
         loadURL(NSURL(string: "https://cdn.rawgit.com/JadenGeller/Helium/master/helium_start.html")!)
     }
 
-    var webView = WKWebView()
     var shouldRedirect: Bool {
         get {
             return !NSUserDefaults.standardUserDefaults().boolForKey(UserSetting.DisabledMagicURLs.userDefaultsKey)
@@ -148,7 +152,7 @@ class WebViewController: NSViewController, WKNavigationDelegate {
             modified = modified.replacePrefix("https://vimeo.com/", replacement: "http://player.vimeo.com/video/")
             modified = modified.replacePrefix("http://v.youku.com/v_show/id_", replacement: "http://player.youku.com/embed/")
             
-        if self.uneditedURL.containsString("https://youtu.be") {
+            if self.uneditedURL != nil && self.uneditedURL.containsString("https://youtu.be") {
                 if urlString.containsString("?t=") {
                     modified = "https://youtube.com/embed/" + getVideoHash(urlString) + makeCustomStartTimeURL(urlString)
                 }

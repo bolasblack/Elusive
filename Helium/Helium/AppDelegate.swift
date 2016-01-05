@@ -39,20 +39,17 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         NSUserDefaults.standardUserDefaults().setBool((sender.state == NSOffState), forKey: UserSetting.DisabledMagicURLs.userDefaultsKey)
     }
     
+    // MARK: - handleURLEvent
     
-//MARK: - handleURLEvent
     // Called when the App opened via URL.
     func handleURLEvent(event: NSAppleEventDescriptor, withReply reply: NSAppleEventDescriptor) {
-        if let urlString:String? = event.paramDescriptorForKeyword(AEKeyword(keyDirectObject))?.stringValue {
-            if let url:String? = urlString?.substringFromIndex(urlString!.startIndex.advancedBy(9)){
-                let urlObject:NSURL = NSURL(string:url!)!
-            NSNotificationCenter.defaultCenter().postNotificationName("HeliumLoadURL", object: urlObject)
-                
+        if let urlString: String? = event.paramDescriptorForKeyword(AEKeyword(keyDirectObject))?.stringValue {
+            if let url: String? = urlString?.substringFromIndex(urlString!.startIndex.advancedBy(9)) {
+                let urlObject: NSURL = NSURL(string: url!)!
+                NSNotificationCenter.defaultCenter().postNotificationName("HeliumLoadURL", object: urlObject)
             }else {
                 print("No valid URL to handle")
             }
-            
-            
         }
     }
 }
