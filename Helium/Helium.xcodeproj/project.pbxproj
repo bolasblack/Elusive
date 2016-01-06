@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0199182B1C3BF6EF007C908C /* CustomWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0199182A1C3BF6EF007C908C /* CustomWebView.swift */; };
 		27199AB41BE422AC00E02297 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 27199AB31BE422AC00E02297 /* icon.icns */; };
 		27199AB71BE422AC00E02297 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27199AB61BE422AC00E02297 /* ShareViewController.swift */; };
 		27199ABA1BE422AC00E02297 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27199AB81BE422AC00E02297 /* ShareViewController.xib */; };
@@ -66,6 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0199182A1C3BF6EF007C908C /* CustomWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWebView.swift; sourceTree = "<group>"; };
 		27199AB01BE422AC00E02297 /* HeliumShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HeliumShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		27199AB31BE422AC00E02297 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		27199AB51BE422AC00E02297 /* HeliumShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HeliumShareExtension.entitlements; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				4D867CB61AD6781200681331 /* AppDelegate.swift */,
 				4D867CD31AD6796A00681331 /* HeliumPanelController.swift */,
 				4D867CB81AD6781200681331 /* WebViewController.swift */,
+				0199182A1C3BF6EF007C908C /* CustomWebView.swift */,
 				4DEAB8FE1ADBD98600A2FC2B /* WKWebViewPrivate.h */,
 				4D867CBA1AD6781200681331 /* Images.xcassets */,
 				4D867CBC1AD6781200681331 /* Main.storyboard */,
@@ -278,7 +281,6 @@
 				TargetAttributes = {
 					27199AAF1BE422AC00E02297 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = PLYLXBYCEQ;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -287,7 +289,6 @@
 					};
 					4D867CB01AD6781200681331 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = PLYLXBYCEQ;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 0;
@@ -364,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D867CD41AD6796A00681331 /* HeliumPanelController.swift in Sources */,
+				0199182B1C3BF6EF007C908C /* CustomWebView.swift in Sources */,
 				4D8DAEAC1C3A41F300B212EC /* UserSettings.swift in Sources */,
 				4D867CB91AD6781200681331 /* WebViewController.swift in Sources */,
 				4D867CB71AD6781200681331 /* AppDelegate.swift in Sources */,
@@ -417,8 +419,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = HeliumShareExtension/HeliumShareExtension.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = HeliumShareExtension/Info.plist;
@@ -435,8 +437,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = HeliumShareExtension/HeliumShareExtension.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = HeliumShareExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
@@ -533,8 +535,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "3rd Party Mac Developer Application";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -544,8 +546,9 @@
 				INFOPLIST_FILE = Helium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JadenGeller.Helium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "270b78d3-965c-43ac-abb1-1c22612b453c";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Helium/Helium-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -556,8 +559,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "3rd Party Mac Developer Application";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -567,8 +570,9 @@
 				INFOPLIST_FILE = Helium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JadenGeller.Helium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "270b78d3-965c-43ac-abb1-1c22612b453c";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Helium/Helium-Bridging-Header.h";
 			};
 			name = Release;

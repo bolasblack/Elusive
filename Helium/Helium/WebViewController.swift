@@ -10,7 +10,7 @@ import Cocoa
 import WebKit
 
 class WebViewController: NSViewController, WKNavigationDelegate {
-    var webView = WKWebView()
+    var webView = CustomWebView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,6 @@ class WebViewController: NSViewController, WKNavigationDelegate {
         view.addTrackingRect(view.bounds, owner: self, userData: nil, assumeInside: false)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadURLObject:", name: "HeliumLoadURL", object: nil)
-        
 
         // Layout webview
         view.addSubview(webView)
