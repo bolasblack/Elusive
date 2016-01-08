@@ -13,8 +13,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     @IBOutlet weak var magicURLMenu: NSMenuItem!
     @IBOutlet weak var fullScreenFloatMenu: NSMenuItem!
+    
+    let urlscheme = "helium"
 
     func applicationWillFinishLaunching(notification: NSNotification) {
+        NSLog("app initialized")
         NSAppleEventManager.sharedAppleEventManager().setEventHandler(
             self,
             andSelector: "handleURLEvent:withReply:",
@@ -42,13 +45,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     // MARK: - handleURLEvent
     
     // Called when the App opened via URL.
+    //   helium://?x=10&y=20&url=https://google.com
     func handleURLEvent(event: NSAppleEventDescriptor, withReply reply: NSAppleEventDescriptor) {
         if let urlString: String? = event.paramDescriptorForKeyword(AEKeyword(keyDirectObject))?.stringValue {
-            if let url: String? = urlString?.substringFromIndex(urlString!.startIndex.advancedBy(9)) {
-                let urlObject: NSURL = NSURL(string: url!)!
-                NSNotificationCenter.defaultCenter().postNotificationName("HeliumLoadURL", object: urlObject)
+            if let url: NSURL? = NSURL(string: urlString!) {
+                NSLog("url scheme \(url?.absoluteString)")
+                NSNotificationCenter.defaultCenter().postNotificationName("HeliumLoadURL", object: url)
             }else {
-                print("No valid URL to handle")
+                NSLog("url scheme no valid URL to handle")
             }
         }
     }

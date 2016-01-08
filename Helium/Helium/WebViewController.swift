@@ -124,7 +124,19 @@ class WebViewController: NSViewController, WKNavigationDelegate {
     
     func loadURLObject(urlObject : NSNotification) {
         if let url = urlObject.object as? NSURL {
-            loadAlmostURL(url.absoluteString);
+            if let target = url.queryComponents["url"] {
+                NSLog("urlscheme open url \(target!)")
+                loadAlmostURL(target!)
+            }
+            var windowFrame = self.webView.window!.frame
+            if let x = url.queryComponents["x"], parsedX = Float(x!) {
+                windowFrame.origin.x = CGFloat(parsedX)
+            }
+            if let y = url.queryComponents["y"], parsedY = Float(y!) {
+                windowFrame.origin.y = CGFloat(parsedY)
+            }
+            NSLog("urlscheme set window frame origin \(windowFrame)")
+            self.webView.window?.setFrame(windowFrame, display: true)
         }
     }
     

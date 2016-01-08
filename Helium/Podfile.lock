@@ -1,0 +1,13 @@
+PODS:
+  - Sparkle (1.13.0)
+  - STRegex (0.3.0)
+
+DEPENDENCIES:
+  - Sparkle
+  - STRegex (~> 0.3.0)
+
+SPEC CHECKSUMS:
+  Sparkle: d04d17a32eaddab19471d0c3d9db15164afdbc6e
+  STRegex: 5e12f6376da1ec945689fb693cf18dcf663b7190
+
+COCOAPODS: 0.39.0

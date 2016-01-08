@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		015279C01C3DEE33000F4E48 /* NSURL+queryComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015279BF1C3DEE33000F4E48 /* NSURL+queryComponents.swift */; };
 		0199182B1C3BF6EF007C908C /* CustomWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0199182A1C3BF6EF007C908C /* CustomWebView.swift */; };
 		27199AB41BE422AC00E02297 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 27199AB31BE422AC00E02297 /* icon.icns */; };
 		27199AB71BE422AC00E02297 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27199AB61BE422AC00E02297 /* ShareViewController.swift */; };
@@ -20,9 +21,8 @@
 		4D8DAEAC1C3A41F300B212EC /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA3EA011BE4CEC9001A471F /* UserSettings.swift */; };
 		4D8DAEB31C3A427D00B212EC /* HeliumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8DAEB11C3A427D00B212EC /* HeliumTests.swift */; };
 		4D8DAEB41C3A427D00B212EC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D8DAEB21C3A427D00B212EC /* Info.plist */; };
-		B34C1EC31ADE3B520094ADBA /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B34C1EC21ADE3B520094ADBA /* Sparkle.framework */; };
+		8379494C81FCF13B46A73A20 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B2DAA6A2573D605AABDFD2 /* Pods.framework */; };
 		B34C1EC61ADE3CBE0094ADBA /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = B34C1EC51ADE3CBE0094ADBA /* dsa_pub.pem */; };
-		B34C1EC91ADE3F980094ADBA /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B34C1EC21ADE3B520094ADBA /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,20 +54,12 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B34C1EC81ADE3F870094ADBA /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B34C1EC91ADE3F980094ADBA /* Sparkle.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		015279BF1C3DEE33000F4E48 /* NSURL+queryComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+queryComponents.swift"; sourceTree = "<group>"; };
 		0199182A1C3BF6EF007C908C /* CustomWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWebView.swift; sourceTree = "<group>"; };
+		106B1CA8A335DA73C3E10598 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		27199AB01BE422AC00E02297 /* HeliumShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HeliumShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		27199AB31BE422AC00E02297 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		27199AB51BE422AC00E02297 /* HeliumShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HeliumShareExtension.entitlements; sourceTree = "<group>"; };
@@ -86,9 +78,10 @@
 		4D8DAEB21C3A427D00B212EC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DEAB8FD1ADBD98600A2FC2B /* Helium-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Helium-Bridging-Header.h"; sourceTree = "<group>"; };
 		4DEAB8FE1ADBD98600A2FC2B /* WKWebViewPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewPrivate.h; sourceTree = "<group>"; };
+		71B2DAA6A2573D605AABDFD2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA3EA011BE4CEC9001A471F /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
-		B34C1EC21ADE3B520094ADBA /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		B34C1EC51ADE3CBE0094ADBA /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		FF019D333C6728C5A49AD6D0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B34C1EC31ADE3B520094ADBA /* Sparkle.framework in Frameworks */,
+				8379494C81FCF13B46A73A20 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		015279BE1C3DEDFA000F4E48 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				015279BF1C3DEE33000F4E48 /* NSURL+queryComponents.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		27199AB11BE422AC00E02297 /* HeliumShareExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +138,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		33C323F0AEC40CFB5802C6BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71B2DAA6A2573D605AABDFD2 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4D867CA81AD6781200681331 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +153,8 @@
 				4D8DAEB01C3A427D00B212EC /* HeliumTests */,
 				27199AB11BE422AC00E02297 /* HeliumShareExtension */,
 				4D867CB21AD6781200681331 /* Products */,
+				C95FB15CD2ED33CB2144E210 /* Pods */,
+				33C323F0AEC40CFB5802C6BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +171,7 @@
 		4D867CB31AD6781200681331 /* Helium */ = {
 			isa = PBXGroup;
 			children = (
+				015279BE1C3DEDFA000F4E48 /* Extensions */,
 				4D867CB61AD6781200681331 /* AppDelegate.swift */,
 				4D867CD31AD6796A00681331 /* HeliumPanelController.swift */,
 				4D867CB81AD6781200681331 /* WebViewController.swift */,
@@ -197,7 +209,6 @@
 		B34C1EC41ADE3B5E0094ADBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B34C1EC21ADE3B520094ADBA /* Sparkle.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -208,6 +219,15 @@
 				B34C1EC51ADE3CBE0094ADBA /* dsa_pub.pem */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		C95FB15CD2ED33CB2144E210 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				106B1CA8A335DA73C3E10598 /* Pods.debug.xcconfig */,
+				FF019D333C6728C5A49AD6D0 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,11 +254,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D867CCD1AD6781200681331 /* Build configuration list for PBXNativeTarget "Helium" */;
 			buildPhases = (
+				5ACE23C8447F7A376F152EB7 /* Check Pods Manifest.lock */,
 				4D867CAD1AD6781200681331 /* Sources */,
 				4D867CAE1AD6781200681331 /* Frameworks */,
 				4D867CAF1AD6781200681331 /* Resources */,
-				B34C1EC81ADE3F870094ADBA /* CopyFiles */,
 				27199AC21BE422AC00E02297 /* Embed App Extensions */,
+				8866759DF9820AE3DC586224 /* Embed Pods Frameworks */,
+				C8C9217D7EE05DDE4E8FACFF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -289,6 +311,7 @@
 					};
 					4D867CB01AD6781200681331 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 9LW4S2K5ZC;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 0;
@@ -351,6 +374,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5ACE23C8447F7A376F152EB7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8866759DF9820AE3DC586224 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8C9217D7EE05DDE4E8FACFF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		27199AAC1BE422AC00E02297 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -369,6 +440,7 @@
 				4D8DAEAC1C3A41F300B212EC /* UserSettings.swift in Sources */,
 				4D867CB91AD6781200681331 /* WebViewController.swift in Sources */,
 				4D867CB71AD6781200681331 /* AppDelegate.swift in Sources */,
+				015279C01C3DEE33000F4E48 /* NSURL+queryComponents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,20 +604,18 @@
 		};
 		4D867CCE1AD6781200681331 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 106B1CA8A335DA73C3E10598 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Helium",
 				);
 				INFOPLIST_FILE = Helium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JadenGeller.Helium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -556,20 +626,18 @@
 		};
 		4D867CCF1AD6781200681331 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF019D333C6728C5A49AD6D0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Helium",
 				);
 				INFOPLIST_FILE = Helium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JadenGeller.Helium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
