@@ -176,14 +176,14 @@
 				4D867CD31AD6796A00681331 /* HeliumPanelController.swift */,
 				4D867CB81AD6781200681331 /* WebViewController.swift */,
 				0199182A1C3BF6EF007C908C /* CustomWebView.swift */,
+				AAA3EA011BE4CEC9001A471F /* UserSettings.swift */,
 				4DEAB8FE1ADBD98600A2FC2B /* WKWebViewPrivate.h */,
-				4D867CBA1AD6781200681331 /* Images.xcassets */,
-				4D867CBC1AD6781200681331 /* Main.storyboard */,
-				4D867CB41AD6781200681331 /* Supporting Files */,
 				4DEAB8FD1ADBD98600A2FC2B /* Helium-Bridging-Header.h */,
+				4D867CBC1AD6781200681331 /* Main.storyboard */,
+				4D867CBA1AD6781200681331 /* Images.xcassets */,
+				4D867CB41AD6781200681331 /* Supporting Files */,
 				B34C1EC71ADE3CCA0094ADBA /* Resources */,
 				B34C1EC41ADE3B5E0094ADBA /* Frameworks */,
-				AAA3EA011BE4CEC9001A471F /* UserSettings.swift */,
 			);
 			path = Helium;
 			sourceTree = "<group>";

@@ -45,7 +45,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     // MARK: - handleURLEvent
     
     // Called when the App opened via URL.
-    //   helium://?x=10&y=20&url=https://google.com
+    //   helium://?x=10&y=20&width=200&height=180&url=https://google.com
     func handleURLEvent(event: NSAppleEventDescriptor, withReply reply: NSAppleEventDescriptor) {
         if let urlString: String? = event.paramDescriptorForKeyword(AEKeyword(keyDirectObject))?.stringValue {
             if let url: NSURL? = NSURL(string: urlString!) {

@@ -129,14 +129,28 @@ class WebViewController: NSViewController, WKNavigationDelegate {
                 loadAlmostURL(target!)
             }
             var windowFrame = self.webView.window!.frame
-            if let x = url.queryComponents["x"], parsedX = Float(x!) {
-                windowFrame.origin.x = CGFloat(parsedX)
+            if let x = parseQueryComponents(url, paramName: "x") {
+                windowFrame.origin.x = CGFloat(x)
             }
-            if let y = url.queryComponents["y"], parsedY = Float(y!) {
-                windowFrame.origin.y = CGFloat(parsedY)
+            if let y = parseQueryComponents(url, paramName: "y") {
+                windowFrame.origin.y = CGFloat(y)
+            }
+            if let width = parseQueryComponents(url, paramName: "width") {
+                windowFrame.size.width = CGFloat(width)
+            }
+            if let height = parseQueryComponents(url, paramName: "height") {
+                windowFrame.size.height = CGFloat(height)
             }
             NSLog("urlscheme set window frame origin \(windowFrame)")
             self.webView.window?.setFrame(windowFrame, display: true)
+        }
+    }
+    
+    func parseQueryComponents(url: NSURL, paramName: String) -> Float? {
+        if let value = url.queryComponents[paramName] {
+            return Float(value!)
+        } else {
+            return nil
         }
     }
     
