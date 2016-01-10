@@ -17,7 +17,7 @@ class WebViewController: NSViewController, WKNavigationDelegate {
         
         view.addTrackingRect(view.bounds, owner: self, userData: nil, assumeInside: false)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadURLObject:", name: "HeliumLoadURL", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadURLObject:", name: "loadURL", object: nil)
 
         // Layout webview
         view.addSubview(webView)
@@ -118,40 +118,6 @@ class WebViewController: NSViewController, WKNavigationDelegate {
     
     func loadURL(url:NSURL) {
         webView.loadRequest(NSURLRequest(URL: url))
-    }
-    
-    // MARK: - loadURLObject
-    
-    func loadURLObject(urlObject : NSNotification) {
-        if let url = urlObject.object as? NSURL {
-            if let target = url.queryComponents["url"] {
-                NSLog("urlscheme open url \(target!)")
-                loadAlmostURL(target!)
-            }
-            var windowFrame = self.webView.window!.frame
-            if let x = parseQueryComponents(url, paramName: "x") {
-                windowFrame.origin.x = CGFloat(x)
-            }
-            if let y = parseQueryComponents(url, paramName: "y") {
-                windowFrame.origin.y = CGFloat(y)
-            }
-            if let width = parseQueryComponents(url, paramName: "width") {
-                windowFrame.size.width = CGFloat(width)
-            }
-            if let height = parseQueryComponents(url, paramName: "height") {
-                windowFrame.size.height = CGFloat(height)
-            }
-            NSLog("urlscheme set window frame origin \(windowFrame)")
-            self.webView.window?.setFrame(windowFrame, display: true)
-        }
-    }
-    
-    func parseQueryComponents(url: NSURL, paramName: String) -> Float? {
-        if let value = url.queryComponents[paramName] {
-            return Float(value!)
-        } else {
-            return nil
-        }
     }
     
     func requestedReload() {
@@ -278,6 +244,40 @@ class WebViewController: NSViewController, WKNavigationDelegate {
         let endOfHash = url.indexOf("?t")
         let hash = url.substringWithRange(Range<String.Index>(start: url.startIndex.advancedBy(startOfHash+4), end: url.startIndex.advancedBy(endOfHash)))
         return hash
+    }
+    
+    // MARK: Events
+    
+    func loadURLObject(notification : NSNotification) {
+        if let url = notification.userInfo!["url"] as? NSURL {
+            if let target = url.queryComponents["url"] {
+                NSLog("urlscheme open url \(target!)")
+                loadAlmostURL(target!)
+            }
+            var windowFrame = self.webView.window!.frame
+            if let x = parseQueryComponents(url, paramName: "x") {
+                windowFrame.origin.x = CGFloat(x)
+            }
+            if let y = parseQueryComponents(url, paramName: "y") {
+                windowFrame.origin.y = CGFloat(y)
+            }
+            if let width = parseQueryComponents(url, paramName: "width") {
+                windowFrame.size.width = CGFloat(width)
+            }
+            if let height = parseQueryComponents(url, paramName: "height") {
+                windowFrame.size.height = CGFloat(height)
+            }
+            NSLog("urlscheme set window frame origin \(windowFrame)")
+            self.webView.window?.setFrame(windowFrame, display: true)
+        }
+    }
+    
+    func parseQueryComponents(url: NSURL, paramName: String) -> Float? {
+        if let value = url.queryComponents[paramName] {
+            return Float(value!)
+        } else {
+            return nil
+        }
     }
 }
 
