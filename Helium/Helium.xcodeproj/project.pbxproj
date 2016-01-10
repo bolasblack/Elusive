@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		015279C01C3DEE33000F4E48 /* NSURL+queryComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015279BF1C3DEE33000F4E48 /* NSURL+queryComponents.swift */; };
 		0199182B1C3BF6EF007C908C /* CustomWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0199182A1C3BF6EF007C908C /* CustomWebView.swift */; };
-		27199AB41BE422AC00E02297 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 27199AB31BE422AC00E02297 /* icon.icns */; };
-		27199AB71BE422AC00E02297 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27199AB61BE422AC00E02297 /* ShareViewController.swift */; };
-		27199ABA1BE422AC00E02297 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27199AB81BE422AC00E02297 /* ShareViewController.xib */; };
-		27199ABE1BE422AC00E02297 /* HeliumShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 27199AB01BE422AC00E02297 /* HeliumShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4D867CB71AD6781200681331 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D867CB61AD6781200681331 /* AppDelegate.swift */; };
 		4D867CB91AD6781200681331 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D867CB81AD6781200681331 /* WebViewController.swift */; };
 		4D867CBB1AD6781200681331 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D867CBA1AD6781200681331 /* Images.xcassets */; };
@@ -26,13 +22,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		27199ABC1BE422AC00E02297 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4D867CA91AD6781200681331 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 27199AAF1BE422AC00E02297;
-			remoteInfo = HeliumShareExtension;
-		};
 		4D867CC41AD6781200681331 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4D867CA91AD6781200681331 /* Project object */;
@@ -42,30 +31,10 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		27199AC21BE422AC00E02297 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				27199ABE1BE422AC00E02297 /* HeliumShareExtension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		015279BF1C3DEE33000F4E48 /* NSURL+queryComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+queryComponents.swift"; sourceTree = "<group>"; };
 		0199182A1C3BF6EF007C908C /* CustomWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWebView.swift; sourceTree = "<group>"; };
 		106B1CA8A335DA73C3E10598 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		27199AB01BE422AC00E02297 /* HeliumShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HeliumShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		27199AB31BE422AC00E02297 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
-		27199AB51BE422AC00E02297 /* HeliumShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HeliumShareExtension.entitlements; sourceTree = "<group>"; };
-		27199AB61BE422AC00E02297 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
-		27199AB91BE422AC00E02297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ShareViewController.xib; sourceTree = "<group>"; };
-		27199ABB1BE422AC00E02297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D867CB11AD6781200681331 /* Helium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Helium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D867CB51AD6781200681331 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D867CB61AD6781200681331 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,13 +54,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		27199AAD1BE422AC00E02297 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4D867CAE1AD6781200681331 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -118,26 +80,6 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		27199AB11BE422AC00E02297 /* HeliumShareExtension */ = {
-			isa = PBXGroup;
-			children = (
-				27199AB61BE422AC00E02297 /* ShareViewController.swift */,
-				27199AB81BE422AC00E02297 /* ShareViewController.xib */,
-				27199ABB1BE422AC00E02297 /* Info.plist */,
-				27199AB21BE422AC00E02297 /* Supporting Files */,
-			);
-			path = HeliumShareExtension;
-			sourceTree = "<group>";
-		};
-		27199AB21BE422AC00E02297 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				27199AB31BE422AC00E02297 /* icon.icns */,
-				27199AB51BE422AC00E02297 /* HeliumShareExtension.entitlements */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		33C323F0AEC40CFB5802C6BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,7 +93,6 @@
 			children = (
 				4D867CB31AD6781200681331 /* Helium */,
 				4D8DAEB01C3A427D00B212EC /* HeliumTests */,
-				27199AB11BE422AC00E02297 /* HeliumShareExtension */,
 				4D867CB21AD6781200681331 /* Products */,
 				C95FB15CD2ED33CB2144E210 /* Pods */,
 				33C323F0AEC40CFB5802C6BA /* Frameworks */,
@@ -163,7 +104,6 @@
 			children = (
 				4D867CB11AD6781200681331 /* Helium.app */,
 				4D867CC31AD6781200681331 /* HeliumTests.xctest */,
-				27199AB01BE422AC00E02297 /* HeliumShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,7 +123,6 @@
 				4D867CBA1AD6781200681331 /* Images.xcassets */,
 				4D867CB41AD6781200681331 /* Supporting Files */,
 				B34C1EC71ADE3CCA0094ADBA /* Resources */,
-				B34C1EC41ADE3B5E0094ADBA /* Frameworks */,
 			);
 			path = Helium;
 			sourceTree = "<group>";
@@ -206,13 +145,6 @@
 			path = "../../../../Downloads/Helium-master/Helium/HeliumTests";
 			sourceTree = "<group>";
 		};
-		B34C1EC41ADE3B5E0094ADBA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		B34C1EC71ADE3CCA0094ADBA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,23 +165,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		27199AAF1BE422AC00E02297 /* HeliumShareExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 27199AC11BE422AC00E02297 /* Build configuration list for PBXNativeTarget "HeliumShareExtension" */;
-			buildPhases = (
-				27199AAC1BE422AC00E02297 /* Sources */,
-				27199AAD1BE422AC00E02297 /* Frameworks */,
-				27199AAE1BE422AC00E02297 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = HeliumShareExtension;
-			productName = HeliumShareExtension;
-			productReference = 27199AB01BE422AC00E02297 /* HeliumShareExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		4D867CB01AD6781200681331 /* Helium */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D867CCD1AD6781200681331 /* Build configuration list for PBXNativeTarget "Helium" */;
@@ -258,14 +173,12 @@
 				4D867CAD1AD6781200681331 /* Sources */,
 				4D867CAE1AD6781200681331 /* Frameworks */,
 				4D867CAF1AD6781200681331 /* Resources */,
-				27199AC21BE422AC00E02297 /* Embed App Extensions */,
 				8866759DF9820AE3DC586224 /* Embed Pods Frameworks */,
 				C8C9217D7EE05DDE4E8FACFF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				27199ABD1BE422AC00E02297 /* PBXTargetDependency */,
 			);
 			name = Helium;
 			productName = Helium;
@@ -301,14 +214,6 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Jaden Geller";
 				TargetAttributes = {
-					27199AAF1BE422AC00E02297 = {
-						CreatedOnToolsVersion = 7.1;
-						SystemCapabilities = {
-							com.apple.Sandbox = {
-								enabled = 1;
-							};
-						};
-					};
 					4D867CB01AD6781200681331 = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = 9LW4S2K5ZC;
@@ -339,21 +244,11 @@
 			targets = (
 				4D867CB01AD6781200681331 /* Helium */,
 				4D867CC21AD6781200681331 /* HeliumTests */,
-				27199AAF1BE422AC00E02297 /* HeliumShareExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		27199AAE1BE422AC00E02297 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				27199ABA1BE422AC00E02297 /* ShareViewController.xib in Resources */,
-				27199AB41BE422AC00E02297 /* icon.icns in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4D867CAF1AD6781200681331 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,14 +318,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		27199AAC1BE422AC00E02297 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				27199AB71BE422AC00E02297 /* ShareViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4D867CAD1AD6781200681331 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -455,11 +342,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		27199ABD1BE422AC00E02297 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 27199AAF1BE422AC00E02297 /* HeliumShareExtension */;
-			targetProxy = 27199ABC1BE422AC00E02297 /* PBXContainerItemProxy */;
-		};
 		4D867CC51AD6781200681331 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4D867CB01AD6781200681331 /* Helium */;
@@ -468,14 +350,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		27199AB81BE422AC00E02297 /* ShareViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				27199AB91BE422AC00E02297 /* Base */,
-			);
-			name = ShareViewController.xib;
-			sourceTree = "<group>";
-		};
 		4D867CBC1AD6781200681331 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -487,41 +361,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		27199ABF1BE422AC00E02297 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = HeliumShareExtension/HeliumShareExtension.entitlements;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				ENABLE_TESTABILITY = YES;
-				INFOPLIST_FILE = HeliumShareExtension/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.JadenGeller.Helium.HeliumShareExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		27199AC01BE422AC00E02297 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = HeliumShareExtension/HeliumShareExtension.entitlements;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = HeliumShareExtension/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.JadenGeller.Helium.HeliumShareExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		4D867CCB1AD6781200681331 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -616,6 +455,7 @@
 				);
 				INFOPLIST_FILE = Helium/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-DDEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JadenGeller.Helium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -687,15 +527,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		27199AC11BE422AC00E02297 /* Build configuration list for PBXNativeTarget "HeliumShareExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				27199ABF1BE422AC00E02297 /* Debug */,
-				27199AC01BE422AC00E02297 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4D867CAC1AD6781200681331 /* Build configuration list for PBXProject "Helium" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

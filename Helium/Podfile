@@ -15,8 +15,3 @@ end
 target 'HeliumTests' do
 
 end
-
-target 'HeliumShareExtension' do
-
-end
-
