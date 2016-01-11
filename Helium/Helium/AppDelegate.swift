@@ -13,6 +13,7 @@ import Carbon
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     @IBOutlet weak var fullScreenFloatMenu: NSMenuItem!
+    var statusBarItem: NSStatusItem!
     
     let urlscheme = "helium"
 
@@ -26,6 +27,31 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             andEventID: AEEventID(kAEGetURL)
         )
         
+        self.listenGlobalKeyDownEvents()
+        self.adoptStatusBarItem()
+    }
+
+    func applicationDidFinishLaunching(aNotification: NSNotification) {
+        fullScreenFloatMenu.state = NSUserDefaults.standardUserDefaults().boolForKey(UserSetting.DisabledFullScreenFloat.userDefaultsKey) ? NSOffState : NSOnState
+    }
+
+    func applicationWillTerminate(aNotification: NSNotification) {
+        // Insert code here to tear down your application
+    }
+    
+    func adoptStatusBarItem() {
+        let menu = NSMenu()
+        menu.addItem(NSMenuItem(title: "Quit", action: Selector("closeSelf"), keyEquivalent: ""))
+        
+        let statusBar = NSStatusBar.systemStatusBar()
+        statusBarItem = statusBar.statusItemWithLength(NSSquareStatusItemLength)
+        statusBarItem.image = NSImage(named: "statusbar-icon")
+        statusBarItem.image?.template = true
+        statusBarItem.highlightMode = true
+        statusBarItem.menu = menu
+    }
+
+    func listenGlobalKeyDownEvents() {
         let options = NSDictionary(object: kCFBooleanTrue, forKey: kAXTrustedCheckOptionPrompt.takeUnretainedValue() as NSString) as CFDictionaryRef
         let trusted = AXIsProcessTrustedWithOptions(options)
         if (trusted) {
@@ -44,14 +70,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             NSLog("haven't trusted as accessibility client")
             self.closeSelf()
         }
-    }
-
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-        fullScreenFloatMenu.state = NSUserDefaults.standardUserDefaults().boolForKey(UserSetting.DisabledFullScreenFloat.userDefaultsKey) ? NSOffState : NSOnState
-    }
-
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
     }
     
     func closeSelf() {
