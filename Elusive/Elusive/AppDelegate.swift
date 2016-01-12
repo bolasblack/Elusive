@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Helium
+//  Elusive
 //
-//  Created by Jaden Geller on 4/9/15.
-//  Copyright (c) 2015 Jaden Geller. All rights reserved.
+//  Created by c4605 on 4/9/15.
+//  Copyright (c) 2015 c4605. All rights reserved.
 //
 
 import Cocoa
@@ -15,7 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     @IBOutlet weak var fullScreenFloatMenu: NSMenuItem!
     var statusBarItem: NSStatusItem!
     
-    let urlscheme = "helium"
+    let urlscheme = "elusive"
 
     func applicationWillFinishLaunching(notification: NSNotification) {
         NSLog("app initialized")
@@ -79,7 +79,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     // MARK: handleURLEvent
     
     // Called when the App opened via URL.
-    //   helium://?x=10&y=20&width=200&height=180&url=https://google.com
+    //   elusive://?x=10&y=20&width=200&height=180&url=https://google.com
     func handleURLEvent(event: NSAppleEventDescriptor, withReply reply: NSAppleEventDescriptor) {
         if let urlString: String? = event.paramDescriptorForKeyword(AEKeyword(keyDirectObject))?.stringValue {
             if let url = NSURL(string: urlString!) {

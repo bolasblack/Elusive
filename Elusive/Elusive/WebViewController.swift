@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  Helium
+//  Elusive
 //
-//  Created by Jaden Geller on 4/9/15.
-//  Copyright (c) 2015 Jaden Geller. All rights reserved.
+//  Created by c4605 on 4/9/15.
+//  Copyright (c) 2015 c4605. All rights reserved.
 //
 
 import Cocoa

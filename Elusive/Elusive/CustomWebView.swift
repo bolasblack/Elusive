@@ -1,9 +1,9 @@
 //
 //  CustomWebView.swift
-//  Helium
+//  Elusive
 //
 //  Created by c4605 on 16/1/5.
-//  Copyright © 2016年 Jaden Geller. All rights reserved.
+//  Copyright © 2016年 c4605. All rights reserved.
 //
 
 import Cocoa
@@ -52,7 +52,6 @@ private enum ScriptMessageType: String {
 }
 
 class CustomWebView: WKWebView, WKScriptMessageHandler {
-    
     override init(frame: CGRect, configuration: WKWebViewConfiguration) {
         super.init(frame: frame, configuration: configuration)
         

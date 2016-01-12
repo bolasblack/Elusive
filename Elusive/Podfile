@@ -8,10 +8,10 @@ source 'https://git.oschina.net/c4605/Cocoapods-Specs.git'
 pod 'STRegex', '~> 0.3.0'
 pod 'Sparkle'
 
-target 'Helium' do
+target 'Elusive' do
 
 end
 
-target 'HeliumTests' do
+target 'ElusiveTests' do
 
 end

@@ -1,16 +1,14 @@
 //
-//  HeliumPanelController.swift
-//  Helium
+//  ElusivePanelController.swift
+//  Elusive
 //
-//  Created by Jaden Geller on 4/9/15.
-//  Copyright (c) 2015 Jaden Geller. All rights reserved.
+//  Created by c4605 on 4/9/15.
+//  Copyright (c) 2015 c4605. All rights reserved.
 //
 
 import AppKit
 
-let optionKeyCode: UInt16 = 58
-
-class HeliumPanelController : NSWindowController {
+class ElusivePanelController : NSWindowController {
     
     var panel: NSPanel! {
         get {

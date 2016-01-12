@@ -1,9 +1,9 @@
 //
 //  UserSettings.swift
-//  Helium
+//  Elusive
 //
 //  Created by Christian Hoffmann on 10/31/15.
-//  Copyright © 2015 Jaden Geller. All rights reserved.
+//  Copyright © 2015 c4605. All rights reserved.
 //
 
 import Foundation

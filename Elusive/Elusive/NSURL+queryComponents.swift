@@ -1,9 +1,9 @@
 //
 //  NSURL+queryComponents.swift
-//  Helium
+//  Elusive
 //
 //  Created by c4605 on 16/1/7.
-//  Copyright © 2016年 Jaden Geller. All rights reserved.
+//  Copyright © 2016年 c4605. All rights reserved.
 //
 
 import Foundation

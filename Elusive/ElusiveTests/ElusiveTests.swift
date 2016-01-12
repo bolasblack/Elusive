@@ -1,16 +1,15 @@
 //
-//  HeliumTests.swift
-//  HeliumTests
+//  ElusiveTests.swift
+//  Elusive
 //
-//  Created by Jaden Geller on 4/9/15.
-//  Copyright (c) 2015 Jaden Geller. All rights reserved.
+//  Created by c4605 on 16/1/12.
+//  Copyright © 2016年 c4605. All rights reserved.
 //
 
-import Cocoa
 import XCTest
 
-class HeliumTests: XCTestCase {
-    
+class ElusiveTests: XCTestCase {
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -20,17 +19,17 @@ class HeliumTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+
     func testExample() {
         // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-    
+
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock() {
+        self.measureBlock {
             // Put the code you want to measure the time of here.
         }
     }
-    
+
 }
